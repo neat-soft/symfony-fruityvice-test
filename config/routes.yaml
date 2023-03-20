@@ -1,0 +1,13 @@
+app_index:
+    path: /
+    controller: App\Controller\IndexController::index
+api_list_fruit:
+    path: /api/list
+    controller: App\Controller\IndexController::list
+api_list_favorites:
+    path: /api/list/favorites
+    controller: App\Controller\IndexController::listFavorites
+favorite:
+    path: /api/favorite
+    controller: App\Controller\IndexController::favorite
+    methods: POST

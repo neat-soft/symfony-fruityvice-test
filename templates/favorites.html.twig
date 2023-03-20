@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Fruit Test{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        <h1>Favorite Fruit Test</h1>
+        <div class="detail-container">
+            <h3> Total Facts: <strong id="fats">0</strong> </h3>
+            <a href="/">Goto List</a>
+        </div>
+        
+        <table id="favorites" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>genus</th>
+                    <th>family</th>
+                    <th>order</th>
+                    <th>carbohydrates</th>
+                    <th>protein</th>
+                    <th>fat</th>
+                    <th>calories</th>
+                    <th>sugar</th>
+                    <th>Favorites</th>
+                </tr>
+            </thead>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+a {
+	width: 100px;
+	color: red;
+	text-decoration: none;
+	float: right;
+}
+.detail-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
